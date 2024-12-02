@@ -3,12 +3,14 @@ from opencompass.openicl.icl_retriever import ZeroRetriever
 from opencompass.openicl.icl_inferencer import GenInferencer
 from opencompass.datasets.PMMEval import PMMEvalHumanEvalXLDataset, PMMEvalHumanEvalXLEvaluator
 
-NATURAL_LANGUAGE_FULLNAMES = ['English', 'Chinese', 'Arabic', 'Spanish', 'French', 'Japanese', 'Korean', 'Portuguese', 'Thai', 'Vietnamese']
+NATURAL_LANGUAGE_FULLNAMES = ['English', 'Chinese', 'Arabic', 'Spanish',
+                              'French', 'Japanese', 'Korean', 'Portuguese', 'Thai', 'Vietnamese']
 
 PMMEval_HumanEvalXL_datasets = list()
 
 PMMEval_HumanEvalXL_reader_cfg = dict(
-    input_columns=['task_id', 'prompt', 'entry_point', 'test', 'language', 'description', 'natural_language'],
+    input_columns=['task_id', 'prompt', 'entry_point', 'test',
+                   'language', 'description', 'natural_language'],
     output_column='declaration',
     test_split='test'
 )
@@ -25,7 +27,7 @@ PMMEval_HumanEvalXL_infer_cfg = dict(
 PMMEval_HumanEvalXL_datasets = list()
 
 for lang_fullname in NATURAL_LANGUAGE_FULLNAMES:
-    for program_lang in ['python', 'java', 'javascript']:
+    for program_lang in ['python']:
 
         PMMEval_HumanEvalXL_eval_cfg = dict(
             evaluator=dict(

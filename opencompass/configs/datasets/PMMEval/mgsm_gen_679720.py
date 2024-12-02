@@ -3,7 +3,8 @@ from opencompass.openicl.icl_retriever import ZeroRetriever
 from opencompass.openicl.icl_inferencer import GenInferencer
 from opencompass.datasets.PMMEval import PMMEvalMGSMDataset, PMMEvalMGSMEvaluator
 
-NATURAL_LANGUAGE_CODES = ['en', 'zh', 'ar', 'es', 'fr', 'ja', 'ko', 'pt', 'th', 'vi']
+NATURAL_LANGUAGE_CODES = ['en', 'zh', 'ar',
+                          'es', 'fr', 'ja', 'ko', 'pt', 'th', 'vi']
 
 LANG_TO_INSTRUCTIONS = {
     "en": "Solve this math problem. Give the reasoning steps before giving the final answer on the last line by itself in the format of \"The answer is \". Do not add anything other than the integer answer after \"The answer is \".\n\n{question}",

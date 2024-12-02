@@ -1,0 +1,1 @@
+python run.py --datasets mgsm_gen_679720 --hf-type base --hf-path Qwen/Qwen2.5-1.5B --hf-num-gpus 1 --debug -a vllm --batch-size 256
